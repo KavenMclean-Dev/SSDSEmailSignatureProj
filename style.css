@@ -1,0 +1,92 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.signature-wrapper {
+  font-family: 'Orbitron', Verdana, Tahoma, sans-serif;
+  color: #193D6D; ;
+  border-collapse: collapse;
+}
+
+.top-bar {
+  background-color: #193D6D; ;
+  height: 6px;
+  padding: 0;
+}
+
+.bottom-bar {
+  background-color: #A7CD39;
+  height: 6px;
+  padding: 0;
+}
+
+.greeting {
+  font-size: 12px;
+  padding: 6px 10px 0;
+}
+
+.contact-block {
+  padding: 8px 16px 8px 10px;
+}
+
+.name-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.job-title {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.spacer {
+  padding-top: 6px;
+}
+
+.contact-line {
+  font-size: 13px;
+  padding: 2px 0;
+}
+
+.contact-line a {
+  color: #193D6D; ;
+  text-decoration: none;
+}
+
+.icon {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.logo-cell {
+  padding: 8px;
+}
+
+.logo {
+  max-height: 90px;
+  height: auto;
+  display: block;
+}
+
+.footer-bar {
+  background-color: #10247A;
+  color: #ffffff;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 11px;
+}
+
+.footer-bar a {
+  color: #F4ED00;
+  text-decoration: none;
+}
+
+.disclaimer {
+  padding: 6px 10px 12px 10px;
+  font-size: 9px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4;
+}
