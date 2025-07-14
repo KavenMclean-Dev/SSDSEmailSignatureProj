@@ -49,7 +49,7 @@
       border-radius: 12px;
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
       text-align: center;
-      max-width: 500px;
+      max-width: 550px;
       width: 100%;
       animation: bounceIn 1s ease-out forwards;
     }
@@ -59,6 +59,11 @@
       60% { transform: translateY(20px); opacity: 1; }
       80% { transform: translateY(-10px); }
       100% { transform: translateY(0); }
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
     }
 
     h2 {
@@ -86,8 +91,8 @@
       width: 100%;
     }
 
-    button {
-      padding: 14px;
+    .signature-button {
+      padding: 12px;
       font-size: 16px;
       border: none;
       border-radius: 8px;
@@ -98,9 +103,20 @@
       position: relative;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
     }
 
-    button::before {
+    .signature-button img {
+      width: 40px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    }
+
+    .signature-button::before {
       content: '';
       position: absolute;
       top: 0; left: -75%;
@@ -111,18 +127,29 @@
       transition: left 0.6s ease;
     }
 
-    button:hover::before {
+    .signature-button:hover::before {
       left: 125%;
     }
 
-    button:hover {
-      transform: scale(1.05) rotate(-0.5deg);
+    .signature-button:hover {
+      transform: scale(1.03);
       box-shadow: 0 0 15px rgba(25, 61, 109, 0.5);
     }
 
-    button:focus {
-      outline: none;
-      box-shadow: 0 0 10px rgba(25, 61, 109, 0.8);
+    .signature-button span {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 500px) {
+      .signature-button {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+      }
+
+      .signature-button img {
+        margin-bottom: 8px;
+      }
     }
   </style>
 </head>
@@ -130,12 +157,25 @@
 
   <div class="overlay">
     <div class="centered-box">
+      <img src="assets/logo/Logo.png" alt="SSDS Logo" class="logo" />
       <h2>Select Your Signature</h2>
       <div class="d-grid gap-2">
-        <button onclick="location.href='signatureBronwyn.html'">Bronwyn's Signature</button>
-        <button onclick="location.href='signatureDan.Html'">Dan's Signature</button>
-        <button onclick="location.href='signatureJosh.html'">Josh's Signature</button>
-        <button onclick="location.href='signatureLance.html'">Lance's Signature</button>
+        <button class="signature-button" onclick="location.href='signatureBronwyn.html'">
+          <img src="assets/signatures/Bronwyn.png" alt="Bronwyn Signature">
+          <span>Bronwyn's Signature</span>
+        </button>
+        <button class="signature-button" onclick="location.href='signatureDan.html'">
+          <img src="assets/signatures/Dan.png" alt="Dan Signature">
+          <span>Dan's Signature</span>
+        </button>
+        <button class="signature-button" onclick="location.href='signatureJosh.html'">
+          <img src="assets/signatures/Josh.png" alt="Josh Signature">
+          <span>Josh's Signature</span>
+        </button>
+        <button class="signature-button" onclick="location.href='signatureLance.html'">
+          <img src="assets/signatures/Lance.png" alt="Lance Signature">
+          <span>Lance's Signature</span>
+        </button>
       </div>
     </div>
   </div>
