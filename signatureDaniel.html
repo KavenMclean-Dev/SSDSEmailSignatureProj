@@ -1,93 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSDS Email Signature</title>
-  <link rel="icon" href="favicon.png" type="image/png">
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <!-- Link to external Orbitron Font -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<!-- <link rel="stylesheet" href="style.css"> -->
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: Orbitron, 'Segoe UI', sans-serif;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SSDS Email Signature</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" />
+    <!-- Link to external Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Orbitron, 'Segoe UI', sans-serif;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
 
-    .signature-box {
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      position: relative;
-    }
+        .signature-box {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
 
-    .instructions-box {
-      background-color: #ffffff;
-      padding: 2rem;
-      margin-top: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    }
+        .instructions-box {
+            background-color: #ffffff;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        }
 
-    h3 {
-      color: #193d6d;
-    }
+        h3 {
+            color: #193d6d;
+        }
 
-    /* Notification styles */
-    #copyNotification {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background-color: #193d6d;
-      color: white;
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.3rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      font-family: Arial, sans-serif;
-      font-size: 1rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
-      z-index: 9999;
-    }
-    #copyNotification.show {
-      opacity: 1;
-      pointer-events: auto;
-    }
+        /* Notification styles */
+        #copyNotification {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background-color: #193d6d;
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.3rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 9999;
+        }
 
-    /* Copy button styling */
-    #copyBtn {
-      position:static;
-      top: 1rem;
-      right: 1rem;
-    }
-  </style>
+            #copyNotification.show {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        /* Copy button styling */
+        #copyBtn {
+            position: static;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .stack-column {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+                .stack-column > table {
+                    width: 100% !important;
+                }
+
+            .logo-wrapper {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+                .logo-wrapper img {
+                    width: 100% !important;
+                    height: auto !important;
+                }
+        }
+    </style>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <!-- Left Spacer -->
-      <div class="col-12 col-md-1">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <!-- Left Spacer -->
+            <div class="col-12 col-md-1">
 
-      </div>
+            </div>
 
-      <!-- Main Content -->
-      <div class="col-12 col-md-10"">
-        <!-- Signature Section -->
-        <div class="signature-box" style="align-content: center;">
-          <h3 class="text-center mb-4" style="text-align: center;">Your(Daniel) Digital Email Signature</h3>
-
-          <div id="signatureContent" style="margin-top: 2rem; align-content: center;">
-            <!-- Replace with actual HTML Signature -->
-           <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: 'Orbitron', Verdana, Tahoma, sans-serif; color:#193D6D; border-collapse: collapse;">
+            <!-- Main Content -->
+            <div class="col-12 col-md-10" ">
+                <!-- Signature Section -->
+                    <h3 class="text-center mb-4" style="text-align: center;">Your(Daniel) Digital Email Signature</h3>
+                    <div class="signature-box">
+                        <div id="signatureContent">
+                            <!-- This div will hold the signature HTML for copying -->
+               <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: 'Orbitron', Verdana, Tahoma, sans-serif; color:#193D6D; border-collapse: collapse; width:100%; max-width:600px;">
   <!-- Top Divider -->
   <tr>
     <td colspan="2" style="background-color: #193D6D; height: 6px; padding: 0;"></td>
@@ -103,56 +123,60 @@
   <!-- Main Content Row -->
   <tr>
     <!-- Left Column: Contact Info -->
-    <td width="220" valign="top" style="padding: 10px;">
+    <td width="220" valign="top" style="padding:10px; display:inline-block;">
       <table cellpadding="0" cellspacing="0" border="0" width="100%">
         <tr>
-          <td style="font-size:16px; font-weight:bold;">
-          DANIEL STRYDOM<br>
-		     <span style="font-size:13px; font-weight:normal; color: #193D6D; ">Product Manager</span>
+          <td style="font-size:16px; font-weight:bold; white-space:nowrap;">
+            <span style="color: #193D6D;">DANIEL STRYDOM</span><br>
+            <span style="font-size:13px; font-weight:normal; color: #193D6D;">Product Manager</span>
           </td>
         </tr>
+
         <tr><td style="height:10px;"></td></tr>
 
-        <!-- Phone -->
+        <!-- Primary Phone -->
         <tr>
-          <td style="font-size:13px; padding:2px 0;">
+          <td style="font-size:13px; padding:2px 0; white-space:nowrap;">
             <img src="https://cdn.jsdelivr.net/gh/KavenMclean-Dev/SSDSEmailSignatureProj@main/assets/icon/Icon%201-Bell.png" alt="Phone Icon" width="18" style="vertical-align:middle; margin-right:5px;">
-          <span style="color: #193D6D;">076 360 7767</span>
+            <span style="color:#193D6D;">076 360 7767</span>
           </td>
         </tr>
 
         <!-- Email -->
         <tr>
-          <td style="font-size:13px; padding:2px 0;">
+          <td style="font-size:13px; padding:2px ; white-space:nowrap;">
             <img src="https://cdn.jsdelivr.net/gh/KavenMclean-Dev/SSDSEmailSignatureProj@main/assets/icon/Icon%202-Envelope.png" alt="Email Icon" width="18" style="vertical-align:middle; margin-right:5px;">
-            <a href="mailto:design@ssds.io" style="color:#193D6D; text-decoration:none;">design@ssds.io</a>
+            <a href="mailto:design@ssds.io" style="color: #193D6D; text-decoration: none;">design@ssds.io</a>
           </td>
         </tr>
 
         <!-- Website -->
         <tr>
-          <td style="font-size:13px; padding:2px 0;">
+          <td style="font-size:13px; padding:2px ; white-space:nowrap;">
             <img src="https://cdn.jsdelivr.net/gh/KavenMclean-Dev/SSDSEmailSignatureProj@main/assets/icon/Icon%203-Spyglass.png" alt="Website Icon" width="18" style="vertical-align:middle; margin-right:5px;">
-		       <a href="https://ssds.io" style="color:#193D6D; text-decoration:none;">ssds.io</a>
+            <a href="https://ssds.io" style="color:#193D6D; text-decoration:none;">ssds.io</a>
           </td>
         </tr>
 
-        <!-- Alt Phone -->
+        <!-- Secondary Phone -->
         <tr>
-          <td style="font-size:13px; padding:2px 0;">
+          <td style="font-size:13px; padding:2px ; white-space:nowrap;">
             <img src="https://cdn.jsdelivr.net/gh/KavenMclean-Dev/SSDSEmailSignatureProj@main/assets/icon/Icon%204-Oldphone.png" alt="Alt Phone Icon" width="18" style="vertical-align:middle; margin-right:5px;">
-         <span  style="color: #193D6D;">078 881 1758</span>
+            <span style="color:#193D6D;">078 881 1758</span>
           </td>
         </tr>
       </table>
     </td>
 
     <!-- Right Column: Logo -->
-    <td width="340" align="center" valign="middle" style="padding:10px;">
-      <div style="width:220px; height:150px; max-width:100%; max-width:100%; overflow:hidden;">
-        <img src="https://cdn.jsdelivr.net/gh/KavenMclean-Dev/SSDSEmailSignatureProj@main/assets/gif/SSDS%20Logo%20-%20Ketzna%20Rendition%20-%20Rev1%20-%20Blue%202.gif" alt="SSDS Logo" style="width:100%; height:100%; object-fit: contain; display:block;">
-      </div>
-    </td>
+    <td width="250" align="center" valign="middle" style="padding:10px; display:inline-block;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+          <td align="center">
+            <img src="https://cdn.jsdelivr.net/gh/KavenMclean-Dev/SSDSEmailSignatureProj@main/assets/gif/SSDS%20Logo%20-%20Ketzna%20Rendition%20-%20Rev1%20-%20Blue%202.gif" alt="SSDS Logo" width="150" style="max-width:100%; height:auto; display:block; border:0;">
+        </tr>
+      </table>
+    </td
   </tr>
 
   <!-- Bottom Divider -->
@@ -162,189 +186,183 @@
 
   <!-- Footer -->
   <tr>
-    <td colspan="2" style="background-color:#10247A; color:#ffffff; text-align:center; padding:8px 12px; font-size:6px; line-height:1.3;">
-          This email and any accompanying attachments may contain confidential and proprietary information. This information is private and protected by law and, accordingly, if you are not the intended recipient, you are requested to
-delete this entire communication immediately and are notified that any disclosure, copying or distribution of or taking any action based on this information is prohibited. Emails cannot be guaranteed to be secure or free of errors
-or viruses. The sender does not accept any liability or responsibility for any interception, corruption, destruction, loss, late arrival or incompleteness of or tampering or interference with any of the information contained in this
-email or for its incorrect delivery or non-delivery for whatsoever reason or for its effect on any electronic device of the recipient. If verification of this email or any attachment is required, please request a hard-copy version.
+    <td colspan="2" style="background-color:#193D6D; color:#ffffff; text-align:center; padding:8px 12px; font-size:6px; line-height:1.3;">
+      This email and any accompanying attachments may contain confidential and proprietary information. This information is private and protected by law and, accordingly, if you are not the intended recipient, you are requested to
+      delete this entire communication immediately and are notified that any disclosure, copying or distribution of or taking any action based on this information is prohibited. Emails cannot be guaranteed to be secure or free of errors
+      or viruses. The sender does not accept any liability or responsibility for any interception, corruption, destruction, loss, late arrival or incompleteness of or tampering or interference with any of the information contained in this
+      email or for its incorrect delivery or non-delivery for whatsoever reason or for its effect on any electronic device of the recipient. If verification of this email or any attachment is required, please request a hard-copy version.
       <a href="https://www.ssds.io" style="color:#F4ED00; text-decoration:none;">Visit Website</a>
     </td>
   </tr>
 </table>
 
-          </div>
-        <div style="display:inherit ; padding: 10px" id="ButtonDiv">
-        <button 
-        id="backBtn" 
-        onclick="location.href='index.html'"
-        class="btn btn-secondary"
-        type="button" 
-        title="All SSDS Signatures"
-        style=" position:static;">
-                 Back To All SSDS Signatures 
-        </button>
-                <button id="copyBtn" class="btn btn-primary btn-copy" type="button" title="Copy Signature">
-                  Copy Signature
-                </button>
-                <br/>
-                 <i><p style="padding-top: 5px;">Please Note some features such as right Click have been disabled on this website</p></i> 
-                 <i><p>Standard functionality will be restored within your email platform</p></i> 
-          </div>
+                        </div>
+                    </div>
 
-           
-        </div>
+                    
+                    <div style="display:inherit ; padding: 10px" id="ButtonDiv">
+                        <button id="backBtn"
+                                onclick="location.href='index.html'"
+                                class="btn btn-secondary"
+                                type="button"
+                                title="All SSDS Signatures"
+                                style=" position:static;">
+                            Back To All SSDS Signatures
+                        </button>
+                        <button id="copyBtn" class="btn btn-primary btn-copy" type="button" title="Copy Signature">
+                            Copy Signature
+                        </button>
+                        <br />
+                        <i><p style="padding-top: 5px;">Please Note some features such as right Click have been disabled on this website</p></i>
+                        <i><p>Standard functionality will be restored within your email platform</p></i>
+                    </div>
 
-        <!-- Instructions Section -->
-        <div class="instructions-box">
-          <h3 class="mb-3" style="text-align: center;">How to Install Your Email Signature</h3>
 
-          <!-- Tabs for platforms -->
-          <ul class="nav nav-tabs" id="signatureTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="gmail-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#gmail"
-                type="button"
-                role="tab"
-                aria-controls="gmail"
-                aria-selected="true"
-              >
-                Gmail
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="outlook-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#outlook"
-                type="button"
-                role="tab"
-                aria-controls="outlook"
-                aria-selected="false"
-              >
-                Outlook
-              </button>
-            </li>
-          </ul>
+                </div>
 
-          <!-- Tab contents -->
-          <div class="tab-content pt-3" id="signatureTabContent">
-            <!-- Gmail Instructions -->
-            <div
-              class="tab-pane fade show active"
-              id="gmail"
-              role="tabpanel"
-              aria-labelledby="gmail-tab"
-            >
-              <ol>
-                <h6>Instrucitons for Gmail</h6>
-                <li>Open Gmail and go to <strong>Settings ⚙️ &gt; See all settings</strong>.</li>
-                <li>Scroll to the <strong>Signature</strong> section.</li>
-                <li>Click <strong>Create New</strong> and give your signature a name.</li>
-                <li>
-                  Click the <strong>Copy Signature</strong> button above.
-                </li>
-                <li>Paste it into Gmail’s signature editor using <kbd>Ctrl + V</kbd> or right-click → Paste.</li>
-                <li>Set it as the default for new emails and/or replies.</li>
-                <li>Scroll down and click <strong>Save Changes</strong>.</li>
-              </ol>
+                <!-- Instructions Section -->
+                <div class="instructions-box">
+                    <h3 class="mb-3" style="text-align: center;">How to Install Your Email Signature</h3>
+
+                    <!-- Tabs for platforms -->
+                    <ul class="nav nav-tabs" id="signatureTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active"
+                                    id="gmail-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#gmail"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="gmail"
+                                    aria-selected="true">
+                                Gmail
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                    id="outlook-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#outlook"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="outlook"
+                                    aria-selected="false">
+                                Outlook
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab contents -->
+                    <div class="tab-content pt-3" id="signatureTabContent">
+                        <!-- Gmail Instructions -->
+                        <div class="tab-pane fade show active"
+                             id="gmail"
+                             role="tabpanel"
+                             aria-labelledby="gmail-tab">
+                            <ol>
+                                <h6>Instrucitons for Gmail</h6>
+                                <li>Open Gmail and go to <strong>Settings ⚙️ &gt; See all settings</strong>.</li>
+                                <li>Scroll to the <strong>Signature</strong> section.</li>
+                                <li>Click <strong>Create New</strong> and give your signature a name.</li>
+                                <li>
+                                    Click the <strong>Copy Signature</strong> button above.
+                                </li>
+                                <li>Paste it into Gmail’s signature editor using <kbd>Ctrl + V</kbd> or right-click → Paste.</li>
+                                <li>Set it as the default for new emails and/or replies.</li>
+                                <li>Scroll down and click <strong>Save Changes</strong>.</li>
+                            </ol>
+                        </div>
+
+                        <!-- Outlook Instructions -->
+                        <div class="tab-pane fade"
+                             id="outlook"
+                             role="tabpanel"
+                             aria-labelledby="outlook-tab">
+                            <ol>
+                                <h6>Instrucitons for Outlook</h6>
+                                <li>Open Outlook and go to <strong>File &gt; Options</strong>.</li>
+                                <li>In the left pane, click on <strong>Mail</strong>, then click <strong>Signatures</strong>.</li>
+                                <li>Click <strong>New</strong> and give your signature a name.</li>
+                                <li>
+                                    Click the <strong>Copy Signature</strong> button above.
+                                </li>
+                                <li>Paste it into the signature editor using <kbd>Ctrl + V</kbd> or right-click → Paste.</li>
+                                <li>Assign it to new messages and/or replies if desired.</li>
+                                <li>Click <strong>OK</strong> to save your changes.</li>
+                                <p>Please do this from your desktop and allow changes to sync to your mobile</p>
+                            </ol>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
 
-            <!-- Outlook Instructions -->
-            <div
-              class="tab-pane fade"
-              id="outlook"
-              role="tabpanel"
-              aria-labelledby="outlook-tab"
-            >
-              <ol>
-                <h6>Instrucitons for Outlook</h6>
-                <li>Open Outlook and go to <strong>File &gt; Options</strong>.</li>
-                <li>In the left pane, click on <strong>Mail</strong>, then click <strong>Signatures</strong>.</li>
-                <li>Click <strong>New</strong> and give your signature a name.</li>
-                <li>
-                  Click the <strong>Copy Signature</strong> button above.
-                </li>
-                <li>Paste it into the signature editor using <kbd>Ctrl + V</kbd> or right-click → Paste.</li>
-                <li>Assign it to new messages and/or replies if desired.</li>
-                <li>Click <strong>OK</strong> to save your changes.</li>
-                <p>Please do this from your desktop and allow changes to sync to your mobile</p>
-              </ol>
+            <!-- Right Spacer -->
+            <div class="col-12 col-md-1">
+
             </div>
-
-        
-          </div>
         </div>
-      </div>
-
-      <!-- Right Spacer -->
-      <div class="col-12 col-md-1">
-
-      </div>
     </div>
-  </div>
 
-  <!-- Copy notification element -->
-  <div id="copyNotification">Copied to clipboard!</div>
+    <!-- Copy notification element -->
+    <div id="copyNotification">Copied to clipboard!</div>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    // Disable right-click
-    document.addEventListener('contextmenu', e => e.preventDefault());
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // Disable inspect keys
-    document.addEventListener('keydown', function (e) {
-      const key = e.key.toLowerCase();
+        // Disable inspect keys
+        document.addEventListener('keydown', function (e) {
+            const key = e.key.toLowerCase();
 
-      if (
-        e.keyCode === 123 || // F12
-        (e.ctrlKey && e.shiftKey && ['i', 'j', 'c', 'u'].includes(key)) ||
-        (e.ctrlKey && ['u', 'i'].includes(key))
-      ) {
-        e.preventDefault();
-      }
-    });
+            if (
+                e.keyCode === 123 || // F12
+                (e.ctrlKey && e.shiftKey && ['i', 'j', 'c', 'u'].includes(key)) ||
+                (e.ctrlKey && ['u', 'i'].includes(key))
+            ) {
+                e.preventDefault();
+            }
+        });
 
-    // Optional: disable select to prevent easy copy outside button
-    document.addEventListener('selectstart', e => e.preventDefault());
+        // Optional: disable select to prevent easy copy outside button
+        document.addEventListener('selectstart', e => e.preventDefault());
 
-    // Notification logic
-    function showCopyNotification(message = 'Copied to clipboard!') {
-      const notif = document.getElementById('copyNotification');
-      notif.textContent = message;
-      notif.classList.add('show');
+        // Notification logic
+        function showCopyNotification(message = 'Copied to clipboard!') {
+            const notif = document.getElementById('copyNotification');
+            notif.textContent = message;
+            notif.classList.add('show');
 
-      setTimeout(() => {
-        notif.classList.remove('show');
-      }, 5000);
-    }
+            setTimeout(() => {
+                notif.classList.remove('show');
+            }, 5000);
+        }
 
-    // Copy rendered HTML function
-    async function copySignatureHTML() {
-      const signature = document.getElementById('signatureContent');
-      const html = signature.innerHTML;
+        // Copy rendered HTML function
+        async function copySignatureHTML() {
+            const signature = document.getElementById('signatureContent');
+            const html = signature.innerHTML;
 
-      try {
-        // Clipboard API: write HTML & plain text
-        await navigator.clipboard.write([
-          new ClipboardItem({
-            'text/html': new Blob([html], { type: 'text/html' }),
-            'text/plain': new Blob([signature.innerText], { type: 'text/plain' }),
-          })
-        ]);
-        showCopyNotification('Signature copied to ClipBoard with formatting!');
-      } catch (err) {
-        // Fallback alert
-        alert('Copy failed! Please Contact Ketzna for assistance.');
-      }
-    }
+            try {
+                // Clipboard API: write HTML & plain text
+                await navigator.clipboard.write([
+                    new ClipboardItem({
+                        'text/html': new Blob([html], { type: 'text/html' }),
+                        'text/plain': new Blob([signature.innerText], { type: 'text/plain' }),
+                    })
+                ]);
+                showCopyNotification('Signature copied to ClipBoard with formatting!');
+            } catch (err) {
+                // Fallback alert
+                alert('Copy failed! Please Contact Ketzna for assistance.');
+            }
+        }
 
-    document.getElementById('copyBtn').addEventListener('click', copySignatureHTML);
-  </script>
+        document.getElementById('copyBtn').addEventListener('click', copySignatureHTML);
+    </script>
 </body>
 </html>

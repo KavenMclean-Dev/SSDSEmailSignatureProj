@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:signatureBronwyn.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Ketzna\\Github\\SSDSEmailSignatureProj\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Ketzna\\Github\\SSDSEmailSignatureProj\\signatureDan.Html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:signatureDan.Html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -30,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "test.html",
-              "DocumentMoniker": "C:\\Ketzna\\Github\\SSDSEmailSignatureProj\\test.html",
-              "RelativeDocumentMoniker": "test.html",
-              "ToolTip": "C:\\Ketzna\\Github\\SSDSEmailSignatureProj\\test.html*",
-              "RelativeToolTip": "test.html*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABDAgAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-16T10:20:28.85Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -53,7 +36,7 @@
               "RelativeDocumentMoniker": "signatureLance.html",
               "ToolTip": "C:\\Ketzna\\Github\\SSDSEmailSignatureProj\\signatureLance.html*",
               "RelativeToolTip": "signatureLance.html*",
-              "ViewState": "AgIAAFQBAAAAAAAAAAAiwGwBAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAgwEwBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-15T16:56:26.835Z",
               "EditorCaption": ""
@@ -66,14 +49,14 @@
               "RelativeDocumentMoniker": "signatureBronwyn.html",
               "ToolTip": "C:\\Ketzna\\Github\\SSDSEmailSignatureProj\\signatureBronwyn.html",
               "RelativeToolTip": "signatureBronwyn.html",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAAAKYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-15T15:58:34.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "signatureDan.Html",
               "DocumentMoniker": "C:\\Ketzna\\Github\\SSDSEmailSignatureProj\\signatureDan.Html",
               "RelativeDocumentMoniker": "signatureDan.Html",
@@ -84,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "SharePortal.html",
               "DocumentMoniker": "C:\\Ketzna\\Github\\SSDSEmailSignatureProj\\SharePortal.html",
               "RelativeDocumentMoniker": "SharePortal.html",
