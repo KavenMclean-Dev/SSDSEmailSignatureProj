@@ -345,7 +345,7 @@
         // Copy rendered HTML function
         async function copySignatureHTML() {
             const signature = document.getElementById('signatureContent');
-            const html = signature.innerHTML;
+            const html = signature.outerHTML;
 
             try {
                 // Clipboard API: write HTML & plain text
